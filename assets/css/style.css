@@ -1,7 +1,13 @@
 body{
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	background: linear-gradient(to bottom right, #EBEBEB, #F5F5F5);
+	margin: 0;
+}
+* {
+  box-sizing: border-box;
 }
 .top-container{
+	margin: 0px;
 	background-color: #fff;
 	overflow: auto;
 	border-bottom: 2px solid #ccc;
@@ -14,20 +20,16 @@ header{
 	background-color: #4aaaa5;
 	color:white;
 	float: left;
-	margin-left: 150px;
 	padding: 5px 25px 5px 25px;
 }
 nav{
 	float: right;
 	font-size: 18px;
-	margin-right: 200px;
+	/*margin-right: 200px;*/
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
-a{
-	padding: 5px;
-	
-}
+
 .navItems{
 	border-right: 1px solid #777;
 	color: #777;
@@ -39,11 +41,11 @@ a{
 }
 .navItems:last-of-type{
 	border-right: none;
+	padding-right: 0px;
 }
 .container{
 	clear: both;
-	background: linear-gradient(to bottom right, #EBEBEB, #F5F5F5);
-	width:100%;
+	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 	/*padding-left: 150px;
@@ -54,16 +56,21 @@ a{
 	margin-top: 30px;
 	margin-bottom: 30px;
 	background-color: #fff;
-	padding: 15px 40px 15px 40px;
-	border: 1px solid #ddd;
+/*	padding: 15px 20px 15px 20px;*/
+	padding: 30px;
+	
 }
 .left-container{
 	float: left;
-	width: 55%;
+	width: 100%;
+	max-width: 650px;
+	border: 1px solid #ddd;
 }
 .sideBar{
 	float: right;
-	width: 270px;
+	width: 100%;
+	max-width: 270px;
+	border: 1px solid #ddd;
 }
 #bio-image{
 	width: 200px;
@@ -72,8 +79,10 @@ a{
 }
 h2{
 	border-bottom: 3px solid #ddd;
-	padding-bottom: 19px;
+	/*padding-bottom: 19px;*/
 	color: #4aaaa5;
+	font-size: 22px;
+	padding-bottom: 20px; 
 }
 p{
 	color: #777;
@@ -81,13 +90,13 @@ p{
 	line-height: 2em; 
 }
 .socialLink{
-	width: 70px;
-	height: 70px;
-	padding-right: 20px;
+	width: 62px;
+	height: 62px;
+	/*padding-right: 20px;*/
 	
 }
 .socialLink:last-of-type{
-	padding-right: 5px;
+	/*padding-right: 5px;*/
 }
 footer{
 	clear:both;
@@ -132,20 +141,53 @@ input[type=text], textarea {
 	color: white;
 	font-size: 20px; 
 }
-
-/*media screen practice*/
-@media screen and (max-width: 1350px){
-	body{
-		width:1250px;
+@media screen and (max-width: 980px){
+	/*Following max-widths found using ratios. */
+	.container{
+		max-width: 768px;
+	}
+	.left-container{
+		max-width: 520px;
 	}
 	.sideBar{
-		float:left;
-		width: 90%;
+		max-width: 216px;
+	}
+	.left-container, .sideBar{
+		padding: 20px;
+	}
+	.socialLink{
+		width: 55px;
+		height: 55px;
 	}
 }
-@media screen and (max-width: 980px){
-	body{
-		width: 900px;
+@media screen and (max-width: 788px){
+	.container{
+		max-width: 640px;
 	}
+	.left-container{
+		max-width: none;
+	}
+	.sideBar{
+		max-width: none;
+	}
+}
+@media screen and (max-width: 660px){
+	.top-container{
+		position: static;
+	}
+	header{
+		width: 100%;
+		text-align: center;
+		position: static; 
+	}
+	nav{
+		float: left; 
+	}
+	.navItems{
+		display: inline-block;
+		padding-left: 75px;
+		padding-right: 75px; 
+	}
+
 
 }
