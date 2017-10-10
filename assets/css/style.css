@@ -181,12 +181,15 @@ input[type=text], textarea {
 		position: static; 
 	}
 	nav{
-		float: left; 
+		position: static; 
+	}
+	.navItems:last-of-type{
+		padding-right: 60px;
 	}
 	.navItems{
 		display: inline-block;
-		padding-left: 75px;
-		padding-right: 75px; 
+		padding-left: 60px;
+		padding-right: 60px; 
 	}
 
 
