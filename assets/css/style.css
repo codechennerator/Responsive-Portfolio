@@ -182,14 +182,17 @@ input[type=text], textarea {
 	}
 	nav{
 		position: static; 
+		width: 100%;
 	}
-	.navItems:last-of-type{
+	/*.navItems:last-of-type{
 		padding-right: 60px;
-	}
+	}*/
 	.navItems{
 		display: inline-block;
-		padding-left: 60px;
-		padding-right: 60px; 
+		width: 30%;
+		text-align: center;
+		/*padding-left: 60px;
+		padding-right: 60px; */
 	}
 
 
